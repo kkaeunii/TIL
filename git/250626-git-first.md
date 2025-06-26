@@ -1,19 +1,20 @@
 # git이란?
 
-Linus Torvalds가 화나서 일주일만에 만든 형상관리 시스템(분산형)
+Linus Torvalds가 화나서 일주일만에 만든 형상관리 시스템(분산형)   
 천재는 이럴 때 쓰는 말이었다.
-
-============
 
 # 오늘 한 것
 
-경로 들어가기 cd 원하는 경로
+경로 들어가기 cd 원하는 경로   
 상위 경로 가기 cd ..
 
 ## git
-- repo 만들고 clone 생성(git clone 깃허브url) -> .gitignore 설정하기!!!
+```repo 만들고 clone 생성(git clone 깃허브url) -> .gitignore 설정하기!!!
+```
 - .gitignore : 특정 파일이나 디렉토리 추적하지 않게 함
-    touch .gitignore > vi .gitignore로 조건 설정 적어두기[.gitignore](https://www.toptal.com/developers/gitignore/)
+```touch .gitignore > vi .gitignore로 조건 설정 적어두기   
+```
+[.gitignore](https://www.toptal.com/developers/gitignore/)
 
 - vim이나 vi로 vim을 실행해도 됨
 
@@ -22,11 +23,15 @@ Linus Torvalds가 화나서 일주일만에 만든 형상관리 시스템(분산
 - commit 할 때 제목 적어야 커밋됨
 - push 처음 하면 입력창이 나오는데, 깃허브에서 token 발행해서 사용. 다음 push부터는 자동으로 됨.
 - commit 메시지 설정 : 규칙대로 해두면 무엇을 했는지 알아보기 쉬움, 메시지는 수정 안 하는 게 나음.
-    prefix를 꼭 달아야 함!!
+```prefix를 꼭 달아야 함!!
+```
     feat(기능 개발 관련) build(빌드 작업 관련) fix(오류 개선/패치) ci(Continous Intergration 관련) 
     docs(문서화) chore(패키지 매니저, 스크립트 등) test(test 관련) style(코드 포매팅 관련) 
     conf(환경설정 - .gitignore)
-- config 설정$ git config --global user.name "{깃허브 사용자 이름}"
+
+```config 설정
+``` 
+             $ git config --global user.name "{깃허브 사용자 이름}"
              $ git config --global user.email "{깃허브 가입한 메일}"
              $ git config --global core.editor "vim" ; vim으로 편집할 거니까
              $ git config --global core.pager "cat" ; cat으로 내용 볼 거니까
