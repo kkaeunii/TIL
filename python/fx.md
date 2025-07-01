@@ -4,7 +4,7 @@
 * 데이터 살펴보기     
 * 데이터 분포 살펴보기    
 * 데이터 전처리
-====================================================
+
 ## 환경 설정    
 **패키지 설치**        
 ```
@@ -61,6 +61,7 @@ np. random.seed(숫자넣기)
 # 기본 문법 : np.random.choice(a, size=None, replace=True, p=None)      
 # a는 선택 대상, size는 뽑을 개수, replace는 복원추출여부, p는 각 항목이 뽑힐 확률 리스트     
 # seed를 먼저 설정하면 choice 결과도 고정됨     
+          
 feature_index = np.random.choice(len[data.columns))      
 
 # 중복값 제거    
@@ -147,6 +148,7 @@ plt.show()
 # 상관계수 행렬 생성    
 # numeric_only는 숫자형 변수만 계산하도록 함      
 corr = data.corr(numeric_only=True)        
+          
 # figure에서 생략될 부분 지정하는 mask 행렬 생성, 실제로는 mask 없어도 괜찮음     
 # mask = np.ones_like(corr, dtype=bool)    
 # mask = np.triu(mask)         
@@ -163,8 +165,10 @@ plt.show()
 # 비교를 위해 원복 데이터 복사   
 # 결측치 중 가장 많은 비중을 차지하는 column을 0으로 대체   
 data['바꿀 column'].fillna(0, inplace=True)   
+        
 # 나머지 결측치를 포함하는 모든 행 버리기(drop)   
 data.dropna(axis=0, inplace=True)   
+          
 # 결측치 제거 확인   
 data.isnull().sun()
 ```     
@@ -181,6 +185,7 @@ target_feature = '변환할 column'
 # 데이터 로그 변환 
 # log에 0값이 들어가는 것을 피하기 위해 1 더하기   
 data[f'log_{target_feature}'] = scale(np.log(data[target_feature]+1))        
+            
 # 로그 변환한 변수 요약 통계량    
 data[f'log_{target_feature}'].describe()
 ```            
@@ -196,8 +201,10 @@ from sklearn.preprocessing import StandarScaler, MinMaxScaler
 ```
 # 스케일링 진행할 변수 선택    
 target_feature = '진행할 column'    
+        
 # 표준화     
 standard_scaler = StandardScaler()           
+           
 # .fit(x) : 입력 데이터 x의 통계적 정보를 계산해 저장 = 학습   
 # .transform(x) : 저장된 정보를 바탕으로 x를 변환 (e.g. 평균 0, 표준편차 1로 스케일링)   
 # .fit_transform(x) : 두 과정 한번에 처리     
