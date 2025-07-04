@@ -33,5 +33,5 @@
                      
 | 기본 구조 |         
 | :--- |            
-| 변수 = 0 <br><br> while 변수 < n: <br> &nbsp;&nbsp;&nbsp;print('수행할 문장')<br> 변수 = 변수 + 1 |   
+| 변수 = 0 <br><br> while 변수 < n: <br> &nbsp;&nbsp;&nbsp;print('수행할 문장')<br> &nbsp;&nbsp;&nbsp; 변수 = 변수 + 1 |   
 | 변수 값이 증가하여 n을 도달하면 반복이 종료 |   
