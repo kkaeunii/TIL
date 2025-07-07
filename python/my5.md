@@ -75,4 +75,11 @@
             
 | Scikit-Learn |        
 | --- |          
-| from sklearn.model_selection import train_test_split <br> from sklearn.linear_model import LinearRegression <br> from sklearn.metrics import accuracy_score <br><br> X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3) : 데이터 분할<br> model = LinearRegression() <br>model.fit(X_train, y_train) : 모델 생성 및 학습 <br> y_pred = model.predict(X_test) <br> accuracy_score(y_test, y_pred) : 예측 및 평가 |
+| from sklearn.model_selection import train_test_split <br> from sklearn.linear_model import LinearRegression <br> from sklearn.metrics import accuracy_score <br><br> X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3) : 데이터 분할<br> model = LinearRegression() <br>model.fit(X_train, y_train) : 모델 생성 및 학습 <br> y_pred = model.predict(X_test) <br> accuracy_score(y_test, y_pred) : 예측 및 평가 |             
+                        
+### 코랩 한글 설치 적용     
+     
+| 한글 설치 | 적용 |        
+| --- | --- |      
+| !sudo apt-get install -y fonts-nanum <br> !sudo fc-cache -fv <br> !rm ~/.cache/matplotlib -rf | plt.rc('font', family = 'NanumBarunGothic') <br> plt.rcParams['axes.unicode_minus'] = False |       
+      
